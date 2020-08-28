@@ -1,0 +1,11 @@
+python amc_search.py \
+    --job=export \
+    --model=mobilenet \
+    --dataset=imagenet \
+    --data_root=/home/dataset/imagenet \
+    --ckpt_path=./checkpoints/mobilenet_imagenet.pth.tar \
+    --seed=2018 \
+    --n_calibration_batches=300 \
+    --n_worker=32 \
+    --channels=3,16,40,72,64,136,136,288,288,288,288,296,304,480,208 \
+    --export_path=./checkpoints/mobilenet_0.5flops_export_target0.3.pth.tar
